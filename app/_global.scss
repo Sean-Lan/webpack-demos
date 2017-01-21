@@ -1,0 +1,5 @@
+$good-height: 100px;
+
+@mixin bg-color($color) {
+    background-color: $color;
+}

@@ -14,6 +14,15 @@ var config = {
       test: /\.jsx?$/,
       exclude: /node_modules/,
       loader: 'babel-loader'
+    }, {
+      test: /\.css$/, // Only .css files
+      loader: 'style!css' // Run both loaders
+    }, {
+      test: /\.less$/,
+      loader: 'style!css!less'
+    }, {
+      test: /\.scss$/,
+      loader: 'style!css!sass'
     }]
   }
 };

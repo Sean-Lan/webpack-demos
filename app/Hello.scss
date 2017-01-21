@@ -1,0 +1,7 @@
+@import 'global';
+
+.bg-red {
+    height: $good-height;
+    @include bg-color(red);
+}
+

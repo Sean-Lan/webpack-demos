@@ -1,0 +1,6 @@
+@import 'global';
+
+.bg-pink {
+    height: $good-height;
+    @include bg-color(pink);
+}
