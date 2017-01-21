@@ -22,8 +22,23 @@ var config = {
       loader: 'style!css!less'
     }, {
       test: /\.scss$/,
-      loader: 'style!css!sass'
+      loader: 'style!css!sass!' + path.resolve('loaders/inject-global-scss')
+    }, {
+      test: /\.jpe?g$|\.gif$|\.png$/i,
+      loader: 'file-loader?name=/img/[name].[ext]'
+    }, {
+      test: /\.otf$/,
+      loader: 'file-loader?name=/fonts/Brown/[name].[ext]'
     }]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, './shared')]
+  },
+  resolve: {
+    alias: {
+      $styles: path.resolve(__dirname, './common/sytles'),
+      imgs: path.resolve(__dirname, './shared/images')
+    }
   }
 };
 

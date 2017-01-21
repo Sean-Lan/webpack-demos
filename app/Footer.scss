@@ -1,6 +1,11 @@
-@import 'global';
+@import 'global'; // includePaths works
+@import '~$styles/common'; // for big font, alias works
 
 .bg-pink {
     height: $good-height;
     @include bg-color(pink);
+}
+
+.bg-df {
+    background-image: url("~imgs/df.jpg"); // alias works but should not with leading $
 }
